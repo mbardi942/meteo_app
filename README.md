@@ -1,16 +1,17 @@
 # weather_app
 
-A new Flutter project.
+A simple meteo app created with Flutter.
 
+The app allows you to view the current and upcoming days' weather for a particular city and save it as a favorite.
+![overview_light](/assets/overview/overview_light.png)
+![overview_dark](/assets/overview/overview_dark.png)
+The application uses the openweathermap API so it is necessary to obtain a token.
+
+The application is designed to work in desktop version
+![overview_desktop](/assets/overview/overview_desktop.png)
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To begin, it is important to create the ".env" file in the root to enter environment variables, especially the token needed to access the openWeather API.
+Example text inside the file:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+TOKEN_OPENWEATHER='XXXXXXXXX'
