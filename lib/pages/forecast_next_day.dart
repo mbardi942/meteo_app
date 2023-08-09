@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:weather_app/models/forecast_weather.dart';
 import 'package:weather_app/utils/utils.dart';
 import 'package:weather_app/widget/app_bar.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class ForecastNextDayPage extends StatelessWidget {
   ForecastNextDayPage({super.key});
@@ -96,8 +97,9 @@ class ForecastNextDayPage extends StatelessWidget {
                       Positioned.fill(
                         child: Align(
                           alignment: Alignment.center,
-                          child: Text(
+                          child: AutoSizeText(
                             Utils.hourFromMilli(time),
+                            maxLines: 1,
                             style: const TextStyle(fontSize: 24, color: Colors.white,fontWeight: FontWeight.w600),
                           ),
                         ),

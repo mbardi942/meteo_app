@@ -91,15 +91,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   late List<Widget> home = [
-    Column(
-      children: [
-        SafeArea(
-          child:
-           searchBar(),
-        ),
-        weather(),
-      ],
-    ),
+       Column(
+        children: [
+          SafeArea(
+            child:
+             searchBar(),
+          ),
+          Expanded(child: SingleChildScrollView(child: weather())),
+        ],
+      ),
     const FavoritesCityWeatherWidget(),
     SettingsWidget()
   ];
@@ -108,17 +108,16 @@ class _HomePageState extends State<HomePage> {
     return BlocBuilder<SearchWeatherBloc, SearchWeatherState>(
         builder: (context, state) {
       if (state is SearchWeatherLoadingState) {
-        return const Expanded(
-          child: Center(
-            child: CircularProgressIndicator(),
-          ),
+        return Container(
+          padding: EdgeInsets.only(top: 150),
+          child: CircularProgressIndicator(),
         );
       }
       if (state is ErrorSearchWeatherState){
-        return const Expanded(
-          child: Center(
-            child: Text('Ops..si è verificato un errore'),
-          ),
+        return Container(
+          padding: EdgeInsets.only(top: 150),
+
+          child: Text('Ops..si è verificato un errore'),
         );
       }
       if (state is SearchWeatherLoadedState) {

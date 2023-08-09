@@ -2,12 +2,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/models/forecast_weather.dart';
 import 'package:weather_app/services/network/model_response/current_weather_response.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ApiWeatherService {
   ApiWeatherService();
 
   String baseUrl = 'api.openweathermap.org';
-  String appid = '6796ee66f72504e32aa4a80115559f41';
+  String appid = dotenv.env['TOKEN_OPENWEATHER']!;
+
   String lang = 'it'; 
   String unit = 'metric';
 
