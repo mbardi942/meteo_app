@@ -15,3 +15,8 @@ To begin, it is important to create the ".env" file in the root to enter environ
 Example text inside the file:
 
 TOKEN_OPENWEATHER='XXXXXXXXX'
+
+## Try Me
+
+Link to download the app for android:
+https://drive.google.com/file/d/1h-1Fk5fsBDgINjnA6RqmG3sOdhwHnaLH/view?usp=sharing
